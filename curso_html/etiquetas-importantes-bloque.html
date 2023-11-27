@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiquetas Importantes. Bloque</title>
+    <style>
+        .div1{
+            color: red;
+        }
+        .div2{
+            color: blue;
+        }
+        .hr{
+            color: maroon;
+        }
+    </style>
+</head>
+<body>
+    <h1>Etiquetas Importantes de Bloque</h1>
+    <article id="1">
+        <nav>
+            <ul>
+                <li><a href="#1">Adress</a></li>
+                <li><a href="#2">Blockquote</a></li>
+                <li><a href="#3">Pre</a></li>
+                <li><a href="#4">Div</a></li>
+                <li><a href="#5">Hr</a></li>
+            </ul>
+        </nav>
+        <h2>Adress</h2>
+        <p>Es utilizada para dar informacion de contacto en el article mas cercano o del body en general.</p>
+        <h3>Semantica</h3>
+        <p>Se hace uso de la etiqueta <i>adress</i>, la cual tendra en su interior la informacion que deseamos brindar. </p>
+        <p>Se recomienda el uso de un salto de linea para aportar mayor esteticidad.</p>
+        <h4>Ejemplo sin salto de linea</h4>
+        <address>
+            Villalba, Steven Tomás.
+            Pte. Perón n°4604.
+            Quilmes, Bs. As.
+            Año 2023
+        </address>
+        <h4>Ejemplo con salto de linea</h4>
+        <address>
+            Villalba, Steven Tomás. <br>
+            Pte. Perón n°4604. <br>
+            Quilmes, Bs. As. <br>
+            Año 2023. <br>
+        </address>
+    </article>
+    <hr>
+    <article id="2">
+        <h2>Blockquote</h2>
+        <p>Se usa para insertar <b>citas</b> de otros autores. <br> Posee el atributo <i>cite</i> donde se le aporta al navegador la informacion sobre de donde se extrajo la cita en cuestion.
+        </p>
+        <h3>Semantica</h3>
+        <p>Se hace uso de la etiqueta blockquote, y en su interior se insetará la cita dentro de una etiqueta "p".</p>
+        <h4>Ejemplo</h4>
+        <blockquote cite="https://depor.com/futbol-internacional/francia/lionel-messi-sobre-cristiano-ronaldo-solo-queria-superarme-para-ser-el-mejor-en-general-no-ser-mejor-que-otro-balon-de-oro-psg-manchester-united-noticia/">
+            <p>
+                "Con Cristiano hemos mantenido una competencia durante años dentro del mismo campeonato. Ha sido maravilloso y nos ha servido a los dos para seguir creciendo en nuestras respectivas carreras, pero sin estar necesariamente pendiente. Solo quería superarme para ser el mejor en general, no ser mejor que otro"
+            </p>
+            <address>
+                Lionel Messi
+                Año 2019
+            </address>
+        </blockquote>
+    </article>
+    <hr>
+    <article id="3">
+        <h2>pre</h2>
+        <p>El uso de esta etiqueta permite que todo codigo que escribamos desde nuestro editor, aparezca de la misma manera en el navegador.</p>
+        <p>Un uso efectivo de esta etiqueta puede darse cuando se desea transcribir una cancion o un poema, por ejemplo.</p>
+        <h3>Semantica</h3>
+        <p>Dentro de la etiqueta "pre" se escribira el contenido deseado.</p>
+        <h4>Ejemplo</h4>
+        <pre>
+            cuando vas a la cancha  
+
+            vas con el patrullero
+
+            vos no tenes aguante
+
+            gallina vigilante
+
+            vos hiciste amistades con el rojo
+
+            y la tercera t vamo a dar
+
+            y dale bo
+
+            vamo a ganar
+
+            que la vuelta 
+
+            queremos daar!
+        </pre>
+    </article>
+    <hr>
+    <article id="4">
+        <h2>Div</h2>
+        <p>Es una herramienta que nos permite <b>dividir</b> el documento o informacion en <b>contenedores genéricos</b> los cuales se usan mas tarde para dar estilos mediante css o hacer uso de "delegacion de eventos" mediante JavaScript.</p>
+        <h3>Semantica</h3>
+        <p>Semanticamente la etiqueta div no tiene gran significancia. Pero se debe tener en cuenta que todo el contenido dentro de un div, <b>está relacionado entre si</b>; no podriamos escribir informacion de dos usuarios distintos entre si dentro de un div.</p>
+        <h4>Ejemplo</h4>
+        <div class="div1">
+            <h4>Nombre</h4>
+            <p>Steven Tomas Villalba</p>
+            <h4>Edad</h4>
+            <p>21 años</p>
+        </div>
+        <div class="div2">
+            <h4>Nombre</h4>
+            <p>Leonel Andres Messi</p>
+            <h4>Edad</h4>
+            <p>35 años</p>
+        </div> 
+        <p>Se ha dado estilo mediante css a cada div por separado.</p>
+    </article>
+    <hr>
+    <article id="5">
+        <h2>HR, <i>horizontal rule</i></h2>
+        <p>Se usa para decirle al navegador y darle a entender al usuario que se va a cambiar de tema.</p>
+        <p>Cuando se este hablando de un tema en concreto y en el siguiente parrafo, articulo o seccion de cambiara de tema, se hace uso de esta etiqueta.</p>
+        <h3>Semantica</h3>
+        <p>Esta etiqueta se aplica sin darle un contenido, y visualmente se representa con una linea, pero <em>NO SE USA PARA CREAR LINEAS.</em></p>
+        <h4>Ejemplo</h4>
+        <section>
+            <h3>Noticia 1</h3>
+            <p>El cordobés Rodrigo López Besso (25), quien había viajado a España por trabajo, sufrió heridas graves tras caer desde varios metros de los Acantilados de la costa de Los Abrigos, del municipio de Granadilla de Abona, en Tenerife. Luego de someterse a una cirugía, su estado "es grave".</p>
+            <hr class="hr">
+            <h3>Noticia 2</h3>
+            <p>Morgan Mirabal, un influencer venezolano de viajes que es muy conocido en TikTok, dejó en claro en un video que Buenos Aires -en ciertos aspectos- es mucho mejor para vivir que ciudades estadounidenses como Nueva York o Miami.</p>
+            <p><i>*se dio estilo a la horizontal rule para que pueda ser identificada</i></p>
+        </section>
+        <a href="etiquetas-importantes-linea.html" target="_blank">Ver etiquetas de importantes de linea</a>
+    </article>
+</body>
+</html>

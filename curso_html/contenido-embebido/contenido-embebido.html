@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contenido Embebido</title>
+    <style>
+        .logo{
+            max-width: 5%;
+        }
+        .cap1{
+            max-width: 50%;
+        }
+        .cap2{
+            max-width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+    <main>
+        <h1>¿Que es el Contenido Embebido?</h1>
+        <article>
+            <h2>Definicion</h2>
+            <p>Es todo el contenido que se utiliza y se trae desde fuera, estos archivos son los que mas peso (tamaño) añaden a un sitio web.</p>
+            <p>Los mas conocidos son:
+            <ul>
+                <li>Imagenes</li>
+                <li>Audio</li>
+                <li>Videos</li>
+                <li>iFrames</li>
+            </ul>
+            </p>
+        </article>
+        <article>
+            <h2>Imagenes</h2>
+            <p>Los formatos de imagenes para desarrollo web se pueden clasificar en dos tipos:</p>
+            <ul>
+                <li>Vectoriales
+                    <ul type="square">
+                        <li>.svg: Es el mas recomendado ya que no añade nada de peso a la pagina.</li>
+                    </ul>
+                </li>
+                <li>Mapa de Bits
+                    <ul type="square">
+                        <li>jpg: Es el formato mas comun, tiene la desventaja de que se reduce la calidad de la imagen si se convierte a este formato.</li>
+                        <li>png 8/24: Se usa si se necesitan transparencias y a difenrencia de jpg, no se pierde calidad en el proceso de compresion.</li>
+                        <li>gif: Imagenes animadas.</li>
+                        <li>webp: Mas recomendado de todos los formatos de mapa de bits. Muchos navegadores antiguos no admiten este formato.</li>
+                    </ul>
+                </li>
+            </ul> 
+            <h3>Mapa de Bits vs Imagenes Vectoriales</h3>
+            <p>Al estar compuesta por pixeles, la imagen tipo mapa de bits pierde calidad cuando, por ejemplo, hacemos zoom en ella, sin embargo, las imagenes de tipo vectoriales <strong>no pierden dicha calidad</strong></p>
+            <p>La imagen tipo mapa de bits es la mejor opcion para fotografias, y la imagen de tipo vectorial para cuando se trabaje logotipos e iconos.</p>
+            </article>
+            <hr>
+            <article>
+                <h2>Insertar imagenes en HTML(Mapa de bits)</h2>
+                <p>Para insertar imagenes en el documento HTML, se hace uso de la etiqueta <strong>img</strong>, la cual trae por defecto 2 atributos: <em>src</em>(ruta de la imagen), y <em>alt</em>(descripcion alternativa).</p>
+                <div>
+                    <h3>Ejemplo: Insertando imagenes de mapa de bits.</h3>
+                    <img src="/contenido-embebido/assets1/images1/capturas/ej1.png" alt="captura de pantalla" class="cap1">
+                </div>
+                <div>
+                    <h3>Resultado</h3>
+                    <img src="/contenido-embebido/assets1/images1/gatogif.gif" alt="gato dando beso">
+                    <img src="/contenido-embebido/assets1/images1/gatojpg.jpeg" alt="gato jpg">
+                    
+                </div>
+            </article>
+            <article>
+                <h2>Insertar imagenes en HTML(Imagenes vectoriales)</h2>
+                <p>Se aplica la misma semantica que con las imagenes tipo Mapa de Bits, con la unica diferencia de que si solo deseamos insertar la imagen y modificar su tamaño, se usa la etiqueta img.</p>
+                <p>Si en cambio de trabajar con la interaccion de dicha imagen haciendo uso avanzado de CSS o JavaScript, se usa el codigo que aparece en los recursos de la imagen vectorial, copiando y pegando el mismo.</p>
+                <p>El resultado es el mismo con los distintos metodos.</p>
+                <div>
+                    <h3>Ejemplo: Insertando imagenes vectoriales.</h3>
+                    <img src="/contenido-embebido/assets1/images1/capturas/Captura desde 2023-07-11 15-44-46.png" alt="captura" class="cap2">
+                </div>
+                <div>
+                    <h3>Resultado</h3>
+                    <img src="/contenido-embebido/assets1/images1/instagram.svg" alt="logo de instagram" class="logo">
+                </div>
+            </article>
+    </main>
+    <footer></footer>
+</body>
+</html>

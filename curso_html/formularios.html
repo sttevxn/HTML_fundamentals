@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <style>
+        fieldset{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Introduccion a los formularios.</h1>
+    <article>
+        <nav>
+            <ul>
+                <li><a href="#1">Estructura</a></li>
+                <li><a href="#2">Semantica</a></li>
+                <li><a href="#3">Asociacion de Input y Label</a></li>
+                <li><a href="#4">Tipos de Input</a></li>
+                <li><a href="#5">Etiquetas Name y Value</a></li>
+                <li><a href="#6">Inputs de Seleccion</a></li>
+                <li><a href="#7">Busqueda con filtro</a></li>
+                <li><a href="#8">FIeldset</a></li>
+                <li><a href="#9">Textarea</a></li>
+                <li><a href="#10">Atributos adicionales</a></li>
+                <li><a href="#11">Metodos de envio</a></li>
+            </ul>
+        </nav>
+    </article>
+    <article id="1">
+        <h2>Estructura basica de un Formulario</h2>
+        <p>La caracteristica mas imporante de los formularios es que nos permite <strong>interactuar</strong> con el usuario.</p>
+        <p>Casi todas las paginas web del mundo, exceptuando las informativas, poseen formularios.</p>
+    </article>
+    <article id="2">
+        <h2>Semantica de los formularios.</h2>
+        <p>1- form: Es la etiqueta que engloba y contiene en su interior nustro formulario.</p>
+        <p>2- label: Sirve para escribir el nombre del campo a rellenar.</p>
+        <p>3- input: Es el campo en el cual el usuario interactua y rellena con informacion.</p>
+        <p>4- button: Es el elemento con el que se envia la informacion recibida.</p>
+        <h3>Semantica</h3>
+        <p>Se inciara el formulario abriendo una etiqueta <strong>form</strong> y en su interior se dará nombre al campo que se desee crear con la etiqueta <strong>label</strong>, luego de esto se debe insertar un correspondiente <strong>input</strong>, en el cual el usuario depositara la informacion y como paso final, se agrega un boton para enviar la informacion haciendo uso de la etiqueta <strong>button</strong>.</p>
+        <form>
+            <label>Nombre</label>
+            <input>
+            <button>Enviar</button>
+        </form>
+    </article>
+    <hr>
+    <article id="3">
+        <h2>Asociacion de Input y Label.</h2>
+        <p>Sabiendo ya la estructura basica de los formularios, nos adentramos en los <strong>atributos</strong>.</p>
+        <p>La etiqueta label posee el atributo <em>for</em> al cual se le indica un <strong>identificador </strong>(id) que emparejará al label con su correspondiente input. <br>La etiqueta input por su parte, debe tener el atributo <em>id</em> para asociar el label con el input. Desde ese momento, cuando hagamos click en el nombre del formulario, se activará automaticamente el campo a rellenar.</p>
+        <h4>Ejemplos</h4>
+        <form>
+            <label for="nombre">Nombre</label>
+            <input id="nombre" name="name1">
+            <button>Enviar</button>
+        </form>
+        <form>
+            <label for="apellido">Apellido</label>
+            <input id="apellido" name="surname1">
+            <button>Enviar</button>
+        </form>
+        <form>
+            <label for="edad">Edad</label>
+            <input id="edad" name="age1">
+            <button>Enviar</button>
+        </form>
+    </article>
+    <hr>
+    <article id="4">
+        <h2>Tipos de Input</h2>
+        <p>El elemento input posee el atributo <em>type</em>, que despliega una lista de distintos tipos de input segun la necesidad que amerite.</p>
+        <ul>
+            <li><b>Button: </b>Se comporta igual que un boton.</li>
+            <li><b>Color: </b>Se utiliza para especificar un color.</li>
+            <li><b>Date: </b>Se utiliza para introducir una fecha.</li>
+            <li><b>Email: </b>Se usa para introducir un e-mail</li>
+            <li><b>File: </b>Permite seleccionar un archivo del dispositi</li>
+            <li><b>Hidden: </b>Campo oculto, no se mostrara el valor qie se ingrese.</li>
+            <li><b>Month: </b>Para indicar un mes.</li>
+            <li><b>Number: </b>Para ingresar valores numericos.</li>
+            <li><b>Password: </b>Para indicar contraseñas.</li>
+            <li><b>Range: </b>Para indicar un rango.</li>
+            <li><b>Reset: </b>Reinicia el formulario.</li>
+            <li><b>Search: </b>Para las barras de busqueda.</li>
+            <li><b>Submit: </b>Envia el formulario, funciona con el type="button"</li>
+            <li><b>Tel: </b>Para ingresar numeros telefonicos.</li>
+            <li><b>Text: </b>Valor por defecto.</li>
+            <li><b>Time: </b>Para indicar una hora.</li>
+            <li><b>Url: </b>Para indicar una url.</li>
+        </ul>
+    </article>
+    <hr>
+    <article id="5">
+        <h2>Etiquetas Name y Value.</h2>
+        <p>La funcion de estas etiquetas presentes en la etiqueta <em>input</em> tienen como funcion:</p>
+        <ol>
+            <li>Name: Nombre del tipo de informacion que se esta por ingresar</li>
+            <li>Value: La informacion en sí.</li>
+        </ol>
+        <p>Cuando se envia la informacion ingresada, el servidor que la reciba tendra la informacion de la categoria que se esta recibiendo y su respectivo valor para ser manipulado.</p>
+    </article>
+    <hr>
+    <article id="6">
+        <h2>Uso de Name y Value en Inputs de Seleccion.</h2>
+        <p>El atributo <strong>Name</strong> es obligatorio ya que permite "agrupar" a los inputs segun el nombre que se le atribuya.</p>
+        <p>De la misma manera, el atributo <strong>Value</strong> es obligatorio para que el navegador identifique cual es la opcion elegida por el usuario en el momento de enviar la informacion del formulario.</p>
+        <ul>
+            <li>Input Radio</li>
+            <li>Input CheckBox</li>
+            <li>Input Select: Despliega una lista de opciones para eligir.</li>
+        </ul>
+        <h4>1- Input Radio</h4>
+        <p>Permite que el usuario elija unicamente una opcion de las que haya disponibles.</p>
+        <form>
+            <input type="radio" name="genero" id="m" value="masculino">
+            <label for="m">Masculino</label>
+            <input type="radio" name="genero" id="f" value="femenino">
+            <label for="f">Femenino</label>
+            <input type="radio" name="genero" id="se" value="sin_especificar">
+            <label for="se">Sin Especificar</label>
+            <div>
+                <input type="reset" value="Deshacer">
+            </div>
+        </form>
+            <h4>2- Input CheckBox</h4>
+            <p>Permite que el usuario pueda elegir más de una opcion.</p>
+            <form >
+                <input type="checkbox" name="lenguaje" id="Python" value="python">
+                <label for="Python">Python</label>
+                <input type="checkbox" name="lenguaje" id="Java" value="java">
+                <label for="Java">Java</label>
+                <input type="checkbox" name="lenguaje" id="HTML" value="html">
+                <label for="HTML">HTML</label>
+                <div>
+                    <input type="reset" value="Deshacer">
+                </div>
+            </form>
+            <h4>3- Input Select</h4>
+            <p>Funciona como una lista desplegable que le permite al usuario elegir una o mas opciones segun se desee. <br>A diferencia de los inputs vistos anteriormente, Slecet tiene su propia etiqueta dentro de la cual, se especifica con la etiqueta <em>option</em> cuales seran las opciones disponibles.</p>
+            
+            <select name="lenguajes" id="">
+                <option value="java">Java</option>
+                <option value="python">Python</option>
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+            </select>
+
+            <h5>Input Select: Multiple Opcion</h5>
+
+            <p>Para tener la funcion de elegir mas de una opcion, se usa el atributo <strong>multiple</strong> para que, presionando la tecla <em>CRTL+CLICK</em>, el usuario elija mas de una opcion.</p>
+
+            <select name="lenguajes" id="" multiple>
+                <option value="java">Java</option>
+                <option value="python">Python</option>
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+            </select>
+
+            <h5>Input Select: Grupos de Opcion</h5>
+
+            <p>Cuando en ocaciones se tiene una lista de opciones muy larga, se pueden agrupar estas mismas en "categorias". Esto es posible mediante el uso de la etiqueta <strong>optgroup</strong> dentro de la etiqueta select, y haciendo uso de su respectivo atributo <strong>label</strong>, donde se definira el titulo del grupo armado con las opciones.</p>
+            <p>Ejemplo con una posible lista de mascotas, agrupadas categoricamente:</p>
+
+            <select name="mascotas" id="">
+                <optgroup label="4 Patas">
+                    <option value="perro">Perro</option>
+                    <option value="gato">Gato</option>
+                    <option value="hamster">Hamster</option>
+                    <option value="conejo">Conejo</option>
+                </optgroup>
+                <optgroup label="Aves">
+                    <option value="loro">Loro</option>
+                    <option value="canario">Canario</option>
+                    <option value="cardenal">Cardenal</option>
+                </optgroup>
+                <optgroup label="Otras" >
+                    <option value="serpiente">Serpiente</option>
+                    <option value="araña">Julian Alvarez</option>
+                </optgroup>
+            </select>
+    </article>
+    <hr>
+    <article id="7">
+       <h2>Busqueda con Filtro. Uso de <strong>Datalist</strong></h2> 
+       <p>Cuando se desee que el usuario realice una busqueda en una lista de opciones, se se hace uso simultaneo del <em>Input List</em> y la etiqueta <strong>Datalist</strong>, la cual en su interior tendra las opciones enmarcadas en etiquetas <em>option</em> (similar al input select)</p>
+       <p><strong>IMPORTANTE: </strong>datalist debe estar identificado medianteun id con la lista armada</p>
+
+       <h3>Ejemplo</h3>
+        <form action="">
+            <input type="list" list="clubes" name="choiced-club">
+            <datalist id="clubes">
+                <option value="CABJ">Club Ateltico Boca Juniors</option>
+                <option value="CARP">Club Atletico River Plate</option>
+                <option value="CAI">Club Atletico Independiente</option>
+                <option value="QAC">Quilmes Atletico CLub</option>
+            </datalist>
+        </form>
+    </article>
+    <hr>
+    <article id="8">
+        <h2>Fieldset: Englobando Datos</h2>
+        <p>El elemento <em>Fieldset</em> ayuda al usuario a guiarse en el momento en que se deban rellenar muchos campos de informacion en un formulario.</p>
+        <h3>Semantica</h3>
+        <p>Fieldset sera usada dentro de la etiqueta <em>form</em> y para darle nombre a la seccion en la que se encuentre el usuario, se hará uso del elemento <strong>legend</strong>.</p>
+        <h4>Ejemplo</h4>
+        <form action="">
+            <fieldset>
+                <legend>Datos personales</legend>
+                <div>
+                    <label for="name1">Nombre</label>
+                    <input type="text" name="name2" id="name1">
+                    <label for="surname1">Apellido</label>
+                    <input type="text" name="surname2" id="surname1">
+                </div>
+                <div>
+                    <form action="">
+                        <label for="country">Pais de residencia</label>
+                        <select name="userdata" id="country">
+                            <optgroup label="Sudamerica">
+                                <option value="arg">Argentina</option>
+                                <option value="py">Paraguay</option>
+                                <option value="uy">Uruguay</option>
+                                <option value="chi">Chile</option>
+                            </optgroup>
+                            <optgroup label="Europa">
+                                <option value="ger">Alemania</option>
+                                <option value="fr">Francia</option>
+                                <option value="esp">España</option>
+                                <option value="por">Portugal</option>
+                            </optgroup>
+                            <optgroup label="Asia">
+                                <option value="chi">China</option>
+                                <option value="nep">Nepal</option>
+                                <option value="ind">Indonesia</option>
+                                <option value="fil">Filipinas</option>
+                            </optgroup>
+                        </select>
+                    </form>
+                </div>
+                <div>
+                    <form action="">
+                        <input type="radio" name="gender2" id="f1">
+                        <label for="f1">Femenino</label>
+                        <input type="radio" name="gender2" id="m1">
+                        <label for="m1">Masculino</label>
+                        <input type="radio" name="gender2" id="o1">
+                        <label for="o1">Otro</label>
+                        
+                    </form>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Contacto</legend>
+               <label for="number">Numero de Celular</label>
+               <input type="number" name="number" id="number">
+               <label for="email">E-mail</label>
+               <input type="email" name="email" id="email">
+            </fieldset>
+        </form>
+    </article>
+    <hr>
+    <article id="9">
+        <h2>Textarea: Area de texto</h2>
+        <p>Textarea es el elemento que se usa con mayor frecuencia para rellenar espacios que seran usados para enviar mensajes, escribir textos largos y demas. Posee atributos que permiten modificar sus dimensiones pero esto es modificado normalmente con CSS. </p>
+        <h3>Semantica</h3>
+        <p>Se usara textarea dentro de la etiqueta form y será asociada a un corresponiente label si se desea.</p>
+        <h4>Ejemplo</h4>
+        <form action="">
+            <div>
+                <label for="message">Mensaje</label>
+            </div>
+            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+            <div>
+                <button>enviar</button>
+            </div>
+        </form>
+    </article>  
+    <hr>
+    <article id="10">
+        <h2>Atributos adicionales</h2>
+        <h3>Placeholder</h3>
+        <p>Da una pista de lo que el usuario debe introducir en el input</p>
+        <h4>Ejemplo</h4>
+        <form action="">
+            <div>
+                <label for="name2">Nombre</label>
+                <input type="text" id="name3" placeholder="Introduce tu nombre">
+            </div>
+            <div>
+                <label for="age2">Edad</label>
+                <input type="text" id="age3" placeholder="Introduce tu edad">
+            </div>
+        </form>
+        <h3>Required</h3>
+        <p>Atributo booleano que convierte los campos a rellenar en <strong>campos obligatorios</strong></p>
+        <h4>Ejemplo</h4>
+        <form action="">
+            <div>
+                <label for="name3">Nombre</label>
+                <input type="text" id="name3" placeholder="Introduce tu nombre" required name="name4">
+            </div>
+            <div>
+                <label for="age3">Edad</label>
+                <input type="text" id="age3" placeholder="Introduce tu edad" required name="age4">
+            </div>
+            <div>
+                <button>Enviar</button>
+            </div>
+        </form>
+        <h3>Min - Max. Limites en inputs numericos</h3>
+        <p>Min y Max son atributos que se usan en los inputs de tipo numericos y permiten marcar un rango entre los numero que se desean que esten disponibles para la eleccion del usuario.</p>
+        <h4>Ejemplo</h4>
+        <form action="">
+            <input type="number" name="" id="" min="18" max="99" placeholder="Selecciona tu edad">
+        </form>
+        <h3>Minlenght - Maxlenght: Limites en inputs de texto </h3>
+        <p>Minlenght y Maxlenght permiten que se determine un limite en el largo de los datos que se ingresen en los inputs de tipo texto. Usualmente se usan para numeros de documentos, contraseñas, nombres de usuario entre otros ejemplos.</p>
+        <h4>Ejemplo</h4>
+        <form action="">
+            <fieldset>
+                <legend>Nuevo Usuario</legend>
+                <span>Crea tu nombre de usuario</span>
+                <div>
+                    <label for="newuser">Usuario</label>
+                    <input type="text" name="" id="newuser" placeholder="Nuevo nombre de usuario" minlength="3" maxlength="10" required>
+                </div>
+                <div>
+                    <label for="newpassword">Crea tu contraseña</label>
+                    <input type="text" name="" id="newpassword" placeholder="Nueva contraseña" minlength="8" required>
+                </div>
+                <div>
+                <button>Enviar</button>
+            </div>
+            </fieldset>
+        </form>
+    </article>
+    <hr>
+    <article id="11">
+        <h2>Metodos GET y POST</h2>
+        <p>Cuando se envian los datos ingresados en el formulario, inidcando el destino con el atributo <em>action</em>, se debe definir qué metodo sera usado para enviar dichos datos. </p>
+        <p>Mientras que <strong>GET</strong> envia informacion mediante la URL, <strong>POST</strong> lo hace en un segundo plano "ocultos" para el usuario, pero pueden ser visualizados mediante el <em>inspector de elementos</em> (F12) en el apartado <em>Network</em>; y es en este punto en el que el atributo <strong>name</strong> gana importancia ya que gracias a éste, el navegador reconoce a que pertenece cada dato recibido, ya sea nombre, edad, o cualquiera sea el caso.</p>
+        <h4>Ejemplo</h4>
+        <form action="x.html" method="post">
+            <label for="xname">Nombre</label>
+            <input type="text" name="xname" id="xname" placeholder="Ingresa tu nombre">
+            <button>Enviar</button>
+        </form>
+    </article>
+</body>
+</html>

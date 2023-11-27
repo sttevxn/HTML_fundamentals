@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiquetas importantes. Linea</title>
+</head>
+<style>
+    .span1{
+        color: blue;
+    }
+    .span2{
+        color: red;
+    }
+    .span3{
+        color: rgb(2, 255, 2);
+    }
+</style>
+<body>
+    <h1>Etiquetas Importantes de Linea</h1>
+    <nav>
+        <ul>
+            <li><a href="#1">Span</a></li>
+            <li><a href="#2">Quote</a></li>
+            <li><a href="#3">Code</a></li>  
+        </ul>
+    </nav>
+    <article>
+        <h2>Haciendo memoria...</h2>
+        <h3>¿Que son los <em>elementos de linea?</em></h3>
+        <p>Son aquellos elementos que ocupan unicamente el mismo espacio que el contenido del mismo, a diferencia de los elementos de bloque, que ocupan el <strong>espacio completo</strong> que ocupan.</p>
+        <h2>Span</h2>
+        <p>Es un contenedor de linea, equivalente a la etiqueta <strong>div</strong>. Es usada frecuentemente para encerrar pequeños fragmentos de texto para darles estilo con css o localizarlos mediante JavaScript.</p>
+        <h3>Ejemplo</h3>
+        <p>Dentro de este texto,<span class="span1"> esta frase es azul</span>, <span class="span2">esta es color rojo</span>, y <span class="span3">esta es color verde</span>.</p>
+    </article>
+    <hr>
+    <article>
+        <h2>q, <i>cita de linea</i></h2>
+        <p>Funciona de la misma manera que la etiqueta <em>blockquote</em>, solo que en este caso, la cita que insertemos sera reconocido por el navegador como <em>elemento de linea.</em></p>
+        <h3>Semantica</h3>
+        <p>Dentro de la etiqueta "q" se insertará la cita que se desea. El atributo "cite" tambien esta disponible para usar si se desea.</p>
+        <h4>Ejemplo</h4>
+        <q cite="https://depor.com/futbol-internacional/francia/lionel-messi-sobre-cristiano-ronaldo-solo-queria-superarme-para-ser-el-mejor-en-general-no-ser-mejor-que-otro-balon-de-oro-psg-manchester-united-noticia/">
+            Con Cristiano hemos mantenido una competencia durante años dentro del mismo campeonato. Ha sido maravilloso y nos ha servido a los dos para seguir creciendo en nuestras respectivas carreras, pero sin estar necesariamente pendiente. Solo quería superarme para ser el mejor en general, no ser mejor que otro
+        </q>
+    </article>
+    <hr>
+    <article>
+        <h2>Code</h2>
+        <p>Se usa para mostrar codigo visualmente. Va ligada a la etiqueta <em>pre</em> vista anteriormente</p>
+        <h4>Ejemplo</h4>
+        <pre>
+            <code>
+                .span1{
+                    color: blue;
+                }
+                .span2{
+                    color: red;
+                }
+                .span3{
+                    color: green;
+                }
+                            
+            </code>
+        </pre>
+    </article>
+    <hr>
+</body>
+</html>
